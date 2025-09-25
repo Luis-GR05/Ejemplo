@@ -1,0 +1,362 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url('Fotos/Imagen fondo.webp'); 
+    background-size:cover;      
+    background-repeat: no-repeat; 
+}
+
+/*TIPO LETRA CCZ PARA LOGO*/
+@font-face {
+    font-family: CCZ;
+    src: url('TipoLetra/CCZoinks.ttf')
+}
+
+p{
+    color: white;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*TITULO LOGO PAGINA*/
+.icono{
+    color: #d9d949;
+    text-shadow: 5px 5px 10px #050869;
+    font-size: 50px;
+    font-family:CCZ;
+    position: relative;
+    margin-right: 200px;
+    left: 100px;
+}
+
+a.titulo{
+    font-family: 'Comic Sans MS';
+    padding-left: 20px;
+    
+}
+
+/*CONTENEDOR LOGO, BOTONES DESPLEGABLES Y MASCARA*/
+.barra {
+    background: linear-gradient(to bottom, #5cbecb, #166fc2);
+    padding: 10px 20px;
+    display: flex;
+    height: 100px;
+    width:auto;
+    align-items: center;
+    border-radius: 15px;
+}
+
+/*CONTENEDOR DE BOTONES CON CONTENIDO DESPLEGABLE*/
+.menu {
+    position:relative;
+    margin-left: 40px;
+}
+
+/*BOTONES DESPLEGABLES EN LA BARRA*/
+.botonDesplegable {
+    color: rgb(217, 217, 73);
+    font-family: 'Comic Sans MS';
+    font-size: 15px;
+    margin-left: 10px;
+    padding: 20px 16px;
+    text-transform: uppercase;
+    letter-spacing: 2spx;
+    font-weight: 500;
+    background: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+ .botonDesplegable:hover {
+    background-color: #373dd3;
+    box-shadow: 0px 15px 20px #050869;
+    color: #d9d949;
+    transform: translateY(-7px);
+ }
+  
+ .botonDesplegable:active {
+    transform: translateY(-1px);
+ }
+
+/*CONTENIDO DESPLEGABLE BOTONES DESPLEGABLES EN LA BARRA*/
+.contenidoDesplegable {
+    display: none;
+    position:absolute;
+    background: linear-gradient(to bottom, #9ee6ef, #5c5fae);
+    width:max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+
+}
+
+ .contenidoDesplegable a {
+    color: #050869;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: 3.5px solid #050869;
+    text-align: justify;
+ }
+
+ .contenidoDesplegable a:hover {
+    background: linear-gradient(to bottom, #5cbecb, #373dd3);
+    color: #d9d949;
+ }
+
+ .menu:hover .contenidoDesplegable {
+    display:block;
+ }
+
+/*MASCARA ANIMACION*/
+@keyframes flota {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-10px); 
+    }
+    75%{
+        transform: translateY(10px); 
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*MASCARA*/
+.mascara-animada {
+    width: 60px;
+    height: auto;
+    animation: flota 3s ease-in-out infinite; 
+    position:relative;
+    left:200px;
+}
+
+/*CAJA CON INFORMACIÓN PRINCIPAL*/
+.cajaInformacion {
+    width: 90%; 
+    height: auto; 
+    background-color: #166fc2ef; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 0 auto; 
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
+ /*FUENTE DE LETRA VAST*/
+ @font-face {
+    font-family: Vast;
+    src: url(TipoLetra/VastShadow-Regular.ttf);
+ }
+ .cajaInformacion p {
+    text-align: justify;
+    line-height: 1.5;
+    word-spacing: 4px;
+    font-size: 20px;
+    color: whitesmoke;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: 10px 0;
+    font-family: Vast;
+    font-style: italic;
+ }
+
+/*CONTENEDOR CAJAS JUEGOS CON IMÁGEN, TÍTULO, INFORMACIÓN Y BOTÓN*/
+.contenedorCajas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 50px 0;
+}
+
+ .caja {
+    width: 270px;
+    height: 370px;
+    background: #166fc2ef;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    flex-direction: column; 
+    justify-content: space-between;
+ }
+
+ .caja img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+ }
+
+ .caja h3{
+    font-size: 20px;
+    text-decoration: none;
+    color:#dede4e;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0 10px 0;
+    hyphens: none;
+ }
+
+ .caja p {
+    text-align:justify;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: 10px 0;
+ }
+
+
+/*BOTÓN SABER MÁS CAJA JUEGOS*/
+.caja .saberMas{
+    display: flexbox;
+    padding: 10px 20px;
+    border: 10px;
+    border-radius: 100px;
+    background-color: #2ba8fb;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s; 
+    line-height: 40px;
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: none;
+    font-weight: none;
+    -webkit-text-stroke: 0px;
+}
+  
+.caja .saberMas:hover{
+    background-color: #0015ff;
+    box-shadow: 0 0 20px #000b85;
+    transform: scale(1.1);
+}
+  
+.caja .saberMas:active{
+    background-color: #0015ff;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+/*CAJA PAGINAS OFICIALES*/
+.cajaPaginas{
+    width: 270px;
+    height: 200px;
+    background: #166fc2ef;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    flex-direction: column; 
+    justify-content: space-between;
+    font-size: 35px;
+}
+/*TÍTULO PÁGINA OFICIAL DE CAJA*/
+.cajaPaginas h3{
+    font-size: 20px;
+    text-decoration: none;
+    color:#dede4e;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0 10px 0;
+    hyphens: none;
+}
+/*IMAGEN PÁGINA OFICIAL DE CAJA*/
+.cajaPaginas img {
+    max-width: 100%;
+    height: 100px;
+    border-radius: 20px;
+}
+
+
+/*PIE DE PAGINA*/
+footer{
+    background: #166fc2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*FORMULARIO*/
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #0077be, #3b8df2);
+    border-radius: 10px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    animation: form-animation 0.5s ease-in-out;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  /*APARTADOS FORM*/
+  .input {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    color: rgb(255, 255, 255);
+    border: 2px solid #3b8df2;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .input::placeholder {
+    color: #fff;
+  }
+  
+  .input:hover,
+  .input:focus {
+    border-color: #3b8df2;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    outline: none;
+  }
+
+  /*BOTÓN FORMULARIO ENVIAR*/
+  .botonForm {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #373dd3;
+    color: #dede4e;
+    font-size: 16px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: rotateX(-10deg);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .botonForm:hover {
+    background-color: #0077be;
+    font-size: 17px;
+    transform: scale(1.05) rotateY(20deg) rotateX(10deg);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
